@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>&lt;flex-grid&gt; Custom Element</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        flex-grid {
+            outline: 1px solid red;
+        }
+
+        flex-grid>*:not(flex-grid) {
+            outline: 1px solid blue;
+        }
+
+        div {
+            text-align: center;
+            vertical-align: middle;
+            min-height: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>&lt;flex-grid&gt; Custom Element</h1>
+
+    <!-- dmeo code -->
+    <flex-grid>
+        <div>flex</div>
+        <div>flex</div>
+        <div>flex</div>
+        <div>flex</div>
+        <flex-grid sm="12" md="6" lg="6">
+            <div md="12">12</div>
+            <div md="6">6</div>
+            <div md="6">6</div>
+            <div md="8">8</div>
+            <div md="4">4</div>
+        </flex-grid>
+    </flex-grid>
+
+    <script src="flex-grid.js" type="text/javascript" async></script>
+</body>
+
+</html>
